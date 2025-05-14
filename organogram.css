@@ -25,9 +25,10 @@ body {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 100%;
   padding: 0 10px;
   margin: 0 auto;
+  
 }
 
 .rectangle {
@@ -104,6 +105,30 @@ body {
   margin: 0 auto 40px;
   background: var(--level-2);
 }
+.level-2-sub {
+  width: 70%;
+  margin: 0 auto 20px;
+  background: var(--level-2);
+}
+
+.level-2-sub-1 {
+  width: 70%;
+  margin: 0 auto 20px;
+  background: var(--level-2);
+}
+
+.level-2-sub::before{
+ content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: var(--black);
+}
+
+
 
 .level-2::before {
   content: "";
@@ -179,7 +204,7 @@ body {
   top: -20px;
   left: -20px;
   width: 2px;
-  height: calc(100% + 20px);
+  height: calc(100% - 8px);
   background: var(--black);
 }
 
