@@ -28,7 +28,6 @@ body {
   max-width: 100%;
   padding: 0 10px;
   margin: 0 auto;
-  
 }
 
 .rectangle {
@@ -117,8 +116,8 @@ body {
   background: var(--level-2);
 }
 
-.level-2-sub::before{
- content: "";
+.level-2-sub::before {
+  content: "";
   position: absolute;
   top: 100%;
   left: 50%;
@@ -127,8 +126,6 @@ body {
   height: 20px;
   background: var(--black);
 }
-
-
 
 .level-2::before {
   content: "";
@@ -155,14 +152,30 @@ body {
 
 /* LEVEL-3 STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.level-3-wrapper {
+@media screen and (min-width:768px) {
+  .level-3-wrapper {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 20px;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
+}
+
+
+
+@media screen and (max-width:768px) {
+  .level-3-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  width: 92%;
+  margin: 0 auto;
+}
+}
+
 
 .level-3-wrapper::before {
   content: "";
@@ -257,23 +270,29 @@ body {
 
   .level-2-wrapper {
     width: 90%;
-    margin-left: 10%;
+    margin-left: 9%;
+    
   }
+  .level-2-wrapper::after {
+  width: 23%; /* Or reduce this value */
+  top:90% ;
+}
 
   .level-2-wrapper::before {
     left: -20px;
     width: 2px;
-    height: calc(100% + 40px);
+    height: calc(90% + 20px);
   }
 
   .level-2-wrapper > li:not(:first-child) {
     margin-top: 50px;
+    
   }
-}
+} 
 
 /* FOOTER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.page-footer {
+/* .page-footer {
   position: fixed;
   right: 0;
   bottom: 20px;
@@ -284,4 +303,4 @@ body {
 
 .page-footer a {
   margin-left: 4px;
-}
+} */
